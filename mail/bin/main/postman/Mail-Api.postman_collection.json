@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "55ad450e-fdb9-42ad-aee4-c1ce16f6fd59",
+		"name": "Mail-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MailApi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\t\"to\":\"e@mail.api\",\r\n    \"subject\":\"Esta es una prueba\",\r\n    \"message\":\"Mensaje de prueba\"\r\n    \r\n}\t\t\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mail/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MailApiAttachment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"to\":\"a@mail.api\",\r\n    \"subject\":\"Esta es una prueba\",\r\n    \"message\":\"Mensaje de prueba\",\r\n    \"attachments\": [\r\n      {\r\n        \"type\": \"application.pdf\",\r\n        \"name\": \"test.pdf\"\r\n      }\r\n     ]\r\n}\t\t\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mail/send/attachment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mail",
+						"send",
+						"attachment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

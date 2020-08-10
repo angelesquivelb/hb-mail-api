@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+    application:
+        name: mail-api
+
+    messages:
+        encoding: UTF-8
+    jackson:
+        property-naming-strategy: 
+        
+mail:
+    user: AKIAJXJRDE53JC4667GQ
+    pass: AqEld1sJ/PyfTgf0cvclLnDqhySRWjl6mA9Ksg44mjFt
+    host: email-smtp.us-west-2.amazonaws.com
+    port: 587
+
+
+
